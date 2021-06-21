@@ -74,7 +74,7 @@ def main(args=None):
             pyramid_levels = parse_pyramid_levels(args.config)
 
     # load the model
-    model = models.load_model(args.model_in, backbone_name=args.backbone)
+    model = models.load_model(args.model_in, backbone_name=args.backbone, compile=False)
 
     # check if this is indeed a training model
     models.check_training_model(model)

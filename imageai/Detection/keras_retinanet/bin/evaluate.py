@@ -148,7 +148,7 @@ def main(args=None):
 
     # load the model
     print('Loading model, this may take a second...')
-    model = models.load_model(args.model, backbone_name=args.backbone)
+    model = models.load_model(args.model, backbone_name=args.backbone, compile=False)
     generator.compute_shapes = make_shapes_callback(model)
 
     # optionally convert the model

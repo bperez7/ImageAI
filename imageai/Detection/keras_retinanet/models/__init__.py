@@ -84,7 +84,7 @@ def load_model(filepath, backbone_name='resnet50'):
         ValueError: In case of an invalid savefile.
     """
     from tensorflow import keras
-    return keras.models.load_model(filepath, custom_objects=backbone(backbone_name).custom_objects)
+    return keras.models.load_model(filepath, custom_objects=backbone(backbone_name).custom_objects, compile=False)
 
 
 def convert_model(model, nms=True, class_specific_filter=True, anchor_params=None, **kwargs):

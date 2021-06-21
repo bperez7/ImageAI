@@ -485,7 +485,7 @@ def main(args=None):
     # create the model
     if args.snapshot is not None:
         print('Loading model, this may take a second...')
-        model            = models.load_model(args.snapshot, backbone_name=args.backbone)
+        model            = models.load_model(args.snapshot, backbone_name=args.backbone, compile=False)
         training_model   = model
         anchor_params    = None
         pyramid_levels   = None
